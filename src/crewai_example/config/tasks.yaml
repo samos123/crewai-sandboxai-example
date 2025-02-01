@@ -1,0 +1,29 @@
+find_gcloud_documentation:
+  description: >
+    Collect relevant gcloud commands and documentation to achieve {topic}.
+
+    You have access to a sandbox that has gcloud installed.
+  expected_output: >
+    You should output 2 things:
+    1. The gcloud command(s) that should be used for achieving the {topic}.
+    2. The output of gcloud --help for the specified commands.
+    A summary of relevant documentation which includes the required commands and parameters.
+  agent: gcp_support_engineer
+
+provide_gcloud_command:
+  description: >
+    Review the summary of relevant documentation and provide a `gcloud` command to execute the task.
+    Make sure you test the gcloud command using bash.
+
+    The command is expected to fail with a permission error but any other
+    errors you should try to fix.
+
+    The system you have access to is based on Ubuntu.
+
+  expected_output: >
+    A list of commands that can be run in a bash shell.
+    Formatted as code without '```'.
+    Please only provide the bash script itself so it can be executed
+    directly.
+  agent: gcp_support_engineer
+  # context: research_task
