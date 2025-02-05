@@ -2,7 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
 from crewai_tools import SerperDevTool
-from .tools.custom_tool import RunShellCommand, RunIPythonCell, RunGCloudCommand
+from sandboxai.experimental import crewai
 
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -25,7 +25,7 @@ class CrewaiExample():
 		return Agent(
 			config=self.agents_config['gcp_support_engineer'],
 			verbose=True,
-			tools=[RunGCloudCommand()]
+			tools=[crewai.SandboxShellTool()]
 		)
 
 

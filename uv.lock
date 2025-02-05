@@ -553,7 +553,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "crewai", extras = ["tools"], specifier = ">=0.100.0,<1.0.0" },
-    { name = "sandboxai-client" },
+    { name = "sandboxai-client", directory = "../sandboxai/python" },
 ]
 
 [[package]]
@@ -3279,30 +3279,25 @@ wheels = [
 [[package]]
 name = "sandboxai-client"
 version = "0.0.1"
-source = { registry = "https://pypi.org/simple" }
+source = { directory = "../sandboxai/python" }
 dependencies = [
     { name = "pydantic" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e6/54/754d4bdffdd12826f69cf7b0c6b5294b9ceda6bcc0bcc0a55ecaeb9d3541/sandboxai_client-0.0.1.tar.gz", hash = "sha256:e2bb9f6ff113ea4d3f67530338f405d2d0d23bedfc59c2a223f074610bc213e0", size = 87730 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ee/cd/3fa7251ddd710a44d728134a6633b1ef204fea85d9cf48e626e4927e9104/sandboxai_client-0.0.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:896bc78161f71be848982eb22f6d7b1327a71bc2d7ac8cce3f8db8c6688ca483", size = 3232449 },
-    { url = "https://files.pythonhosted.org/packages/01/0f/f269782df4ea41405fe989269f819c88ccb086fdd06a274bdbca04a3a8cb/sandboxai_client-0.0.1-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:2d19b7e327509ba216fe3a617ff4f40838994f30afad85ba2c278b26b9bd742f", size = 3458289 },
-    { url = "https://files.pythonhosted.org/packages/81/65/4c5d6d0f1c9316d282c2cba26ff4d6dca8140887e2a582df18d29e3cd0e5/sandboxai_client-0.0.1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6db67077d62e2ca367b7b9046fa8d0262e041807cbe8b2360d65968e52189107", size = 3407029 },
-    { url = "https://files.pythonhosted.org/packages/a6/18/2ce7ec92963c78fa3c987549a87f0309143a0902da2f9d14851784b5e2a7/sandboxai_client-0.0.1-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:56bbfcd49c2fe4899d39efac1d658574e635fae2a28c5066d9d1ce74145d70ff", size = 3407013 },
-    { url = "https://files.pythonhosted.org/packages/bd/d4/0f65862a92cb10219314902c2c9c2a4452b3438fb93fecf8d2c744b08c59/sandboxai_client-0.0.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:3bbb95dc17aafc3308b01b29a723afeedbef5957283964f339ee9ab12c32622e", size = 3232448 },
-    { url = "https://files.pythonhosted.org/packages/20/7f/605b1deb4476a720195625265dcef87a5bc3602b47e285ac5caad01f74c5/sandboxai_client-0.0.1-cp311-cp311-macosx_11_0_x86_64.whl", hash = "sha256:fe7c24a5d8579a061e2321c810988dedde4700a7f83c456b87a2b873e1ae2e7b", size = 3458291 },
-    { url = "https://files.pythonhosted.org/packages/e7/e0/b7324cdedbaef45c6706c508860e9e7d021907901f54ca57fdbadb809144/sandboxai_client-0.0.1-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e012cb004ac8daa04c4622333fe4c828b82569045c53cdaa202a79ddec23d3ae", size = 3407031 },
-    { url = "https://files.pythonhosted.org/packages/fd/54/6a08f55f5f10216813d6d1d77284bf5e4f23584cb7e69c13914d199f1e90/sandboxai_client-0.0.1-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:09064ade2b00942988bbcb43305598f00d7cc2bead2449d761bb1d5ee2e23856", size = 3407014 },
-    { url = "https://files.pythonhosted.org/packages/94/e6/32e549fc2fd2b29662abfab625413b76661d4fc130b028cce9b5e91470cf/sandboxai_client-0.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5da55616d9ed6b2290cc8269c670bf557a20d44d5ac4fe1ecfd635de98c67f41", size = 3232448 },
-    { url = "https://files.pythonhosted.org/packages/3f/ec/f9e7d339e612a7553046215983f433ec63f13ea4a30471303e60449a35ed/sandboxai_client-0.0.1-cp312-cp312-macosx_11_0_x86_64.whl", hash = "sha256:8fb5bb2594c23132142778ebfab6a78b16716852e82bf9b2bc63d2344c72f1fd", size = 3458290 },
-    { url = "https://files.pythonhosted.org/packages/0b/63/148b2a68eb84ead6fbc52ea16e8220082e5ab42a79d8b52c1ee4e4357cd9/sandboxai_client-0.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:68c85c22f29fcfbeeb95a6dd9defa1a810cfa8ed47be064543dfd9d630a363e1", size = 3407032 },
-    { url = "https://files.pythonhosted.org/packages/08/81/ad856921ab0ed0f08ce0f3dd3a8b5bdaa690fb2174f453852c3c9860fb8e/sandboxai_client-0.0.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:191fc9d2fa6ae5e51e986b32609b44de9ce0751f94d69f1bd8d909ab7893b787", size = 3407012 },
-    { url = "https://files.pythonhosted.org/packages/16/88/19c89596b0203e317016374d4f63c37f3ccd8216de7f004f43517de2c31a/sandboxai_client-0.0.1-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:99da6ece2af3b7810af29fb82eebe3a03d90156f2973716c4ac42f4bff412e91", size = 3232455 },
-    { url = "https://files.pythonhosted.org/packages/fe/7f/27d9b0648dc53161d0e7f3f2362a2404197fa349d6b5c951baac1fe75ab1/sandboxai_client-0.0.1-pp310-pypy310_pp73-macosx_11_0_x86_64.whl", hash = "sha256:4506c1e50bc0b9c78b078f18b1e1498d7aa3f6a22600b18e156643b296aa4920", size = 3458297 },
-    { url = "https://files.pythonhosted.org/packages/50/8b/9c2ec3faa10c66ff5da7b23747fcbbb30ca061eee4e4115bd32f05096aee/sandboxai_client-0.0.1-pp310-pypy310_pp73-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f7569b69c0d5ba6cdca1dab73664248704e32b32a4fb9043cb50e7cb0d480809", size = 3407037 },
-    { url = "https://files.pythonhosted.org/packages/a1/54/82a2cf485f40b5563544309b9afeaa488932f62b89837a65cd86d1b0b3ec/sandboxai_client-0.0.1-py3-none-any.whl", hash = "sha256:ab93b7abd57db6e214c974ee531b42f936c4b1ee5575cba889e343e3869a08a0", size = 10314 },
+
+[package.metadata]
+requires-dist = [
+    { name = "pydantic" },
+    { name = "requests" },
+    { name = "swarm", marker = "extra == 'examples'", git = "https://github.com/openai/swarm.git" },
 ]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pytest", specifier = ">=8.3.4" },
+    { name = "ruff", specifier = ">=0.9.3" },
+]
+examples = [{ name = "swarm", git = "https://github.com/openai/swarm.git" }]
 
 [[package]]
 name = "schema"
